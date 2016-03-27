@@ -1,0 +1,321 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,900,700);
+$font-family-base: "Lato", sans-serif !default;
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+
+$white: #fff;
+$black: #000;
+
+
+
+.icon {
+  color: $white;
+  font-size: 35px;
+  text-align: center;
+  display: block;
+}
+
+.main-container {
+  background: rgb(28, 24, 24);
+  background: linear-gradient(top, rgba(23,169,157,0.9) 0, rgba(0,95,99,0.9) 100%);
+  background: -webkit-linear-gradient(top, rgba(23,169,157,0.9) 0, rgba(0,95,99,0.9) 100%);
+  background-size: cover;
+  height: 100%;
+  h1 {
+    font-size: 50px;
+    line-height: 0.9em;
+  }
+  .details {
+    margin-top: -77px;
+  }
+  .item {
+    display: block;
+    background: rgba(255,255,255, .3);
+    border-radius: 7px;
+    margin: 5px;
+    padding: 12px;
+    text-align: center;
+    &.sun {
+      padding: 0;
+      position: relative;
+      background: $white;
+    }
+    .line {
+      height: 2px;
+      width: 100%;
+      margin: 0 auto;
+      position: absolute;
+      top: 50%;
+      margin-top: -1px;
+      background-color: #b0ffee;
+    }
+    .circle {
+      width: 300px;
+      height: 300px;
+      border-radius: 100%;
+      border: 5px solid #228C8A;
+      margin: 30px auto;
+      position: relative;
+      h4 {
+        margin: auto;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: .03em;
+        text-align: center;
+        width: 100%;
+        &:first-child {
+          position: absolute;
+          top: 50px;
+        }
+        &:last-child {
+          position: absolute;
+          bottom: 55px;
+        }
+        p {
+          color: $black;
+          font-weight: 400;
+          margin-bottom: 5px;
+          font-size: 20px;
+        }
+        span {
+          display: block;
+          font-size: 20px;
+          color: rgba(77, 77, 77, 0.61);
+        }
+      }
+    }
+    h3 {
+      color: $white;
+      font-weight: 400;
+      margin-bottom: 10px;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+    h4 {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+      text-align: center;
+      margin-bottom: 10px;
+      color: #b0ffee;
+    }
+    p {
+      color: #b0ffee;
+    }
+    .icon {
+      font-size: 30px;
+      display: block;
+      margin: 10px auto;
+      color: $black;
+    }
+  }
+  .btn {
+    display: block;
+    border-radius: 20px;
+    margin: 25px 50px;
+    padding: 12px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    text-align: center;
+    border: 1px solid $white;
+    color: $white;
+  }
+}
+
+ion-content.has-header {
+  top: 0!important;
+}
+body.platform-ios.platform-cordova:not(.fullscreen) .has-header {
+  top: 0;
+}
+.bar.bar-stable {
+  background: transparent!important;
+  background: rgba(36, 141, 139, 0.5) !important;
+  position: fixed;
+  top: 0;
+  h1.title {
+    color: $white;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+  }
+  .button, .button:hover {
+    color: $white;
+  }
+
+}
+
+.weather-wrap {
+  background: url("../img/bg1.jpg") no-repeat;
+  background-size: cover;
+  text-align: left;
+  padding: 100px 50px 130px 50px;
+  box-shadow: 0px -82px 102px -28px black inset, 0px 82px 102px 33px black;
+  &.good {
+    background: url("../img/bg2.jpg") no-repeat center center;
+    background-size: cover;
+  }
+  &.snow {
+    background: url("../img/bg3.jpg") no-repeat center center;
+    background-size: cover;
+  }
+  &.rain {
+    background: url("../img/bg1.jpg") no-repeat;
+    background-size: cover;
+  }
+  h1, h4, h3, h5 {
+    color: $white!important;
+    margin: 0;
+  }
+  h5 {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 10px;
+    &.subheading {
+      text-align: center;
+    }
+  }
+  h1 {
+    text-align: center;
+    position: relative;
+    margin: 15px 0 10px 0;
+    sup {
+      top: 12px;
+      font-size: 22px;
+      position: absolute;
+    }
+  }
+  h3 {
+    text-align: center;
+    font-size: 26px;
+  }
+  .tips {
+    color: $white;
+    text-align: left;
+    border-top: 1px solid $white;
+    margin-top: 30px;
+    font-size: 15px;
+    padding: 20px 0 5px 0;
+    span {
+      display: block;
+      margin-bottom: 10px;
+      line-height: 1.3em;
+    }
+  }
+}
+.trails-container {
+  background: rgba(255,255,255, .2);
+  border-radius: 7px;
+  opacity: 1;
+  margin: 5px;
+  h3 {
+    padding: 25px 15px 0 15px;
+    font-size: 16px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    color: $white;
+  }
+  h6 {
+    color: #b0ffee;
+    //padding: 10px 15px 0px 15px;
+    text-transform: lowercase;
+    margin: 5px 0 25px 15px;
+    border-bottom: 1px solid #b0ffee;
+    display: inline-block;
+    font-size: 14px;
+  }
+  p {
+    margin: 0;
+    border-top: 1px solid #227F6B;
+    position: relative;
+    a {
+      display: block;
+      color: #b0ffee;
+      text-decoration: none;
+      padding: 15px;
+    }
+    .icon {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      font-size: 22px;
+    }
+  }
+  .t-heading {
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    color: $white;
+  }
+
+  .t-length {
+    font-size: 14px;
+  }
+}
+.list {
+  padding-top: 65px;
+}
+.modal {
+  background-color: rgba(0,0,0,.9);
+  .bar.bar-dark {
+    background: transparent;
+    padding: 9px;
+    .title {
+      font-size: 24px;
+      top: 5px;
+    }
+  }
+  h3 {
+    color: #fff;
+    padding-left: 20px;
+    font-size: 16px;
+    margin-top: 30px;
+  }
+  .city {
+    color: #b0ffee;
+    display: block;
+    padding: 6px;
+    border-radius: 19px;
+    border: 1px solid #b0ffee;
+    width: 150px;
+    text-align: center;
+    margin: 20px;
+  }
+}
+.item-radio .item-content,
+.item-radio input:checked + .radio-content .item-content {
+  background: transparent;
+}
+.item-radio {
+  color: $white;
+  border-color: transparent;
+  background-color: transparent;
+  font-size: 28px;
+  .radio-icon {
+    top: 5px;
+  }
+}

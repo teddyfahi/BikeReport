@@ -1,0 +1,12 @@
+{
+  "name": "BikeReport",
+  "app_id": "06366f6e",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}
